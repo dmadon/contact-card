@@ -25,5 +25,9 @@
   "homepage": "https://github.com/dmadon/contact-card#readme",
   "dependencies": {
     "concurrently": "^7.4.0"
-  }
+  },
+  "engines":{
+    "node": "16.x"
+  },
+  "heroku-prebuild":"npm install --dev"
 }
