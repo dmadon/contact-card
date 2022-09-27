@@ -10,7 +10,7 @@ import {Tooltip, Toast, Popover} from 'bootstrap'; // note: install bootstrap an
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Import initDb method from database.js
-import{initDb} from './database'
+import{initDb, getDb, postDb} from './database'
 
 // Import images
 import Logo from '../images/logo.png';
@@ -20,6 +20,8 @@ import Dog from '../images/dog.png';
 // Add images on load
 window.addEventListener('load', function(){
     initDb();
+    getDb();
+    postDb();
     document.getElementById('logo').src = Logo;
     document.getElementById('bearThumbnail').src = Bear;
     document.getElementById('dogThumbnail').src = Dog;
