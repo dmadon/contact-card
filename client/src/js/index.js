@@ -10,7 +10,7 @@ import {Tooltip, Toast, Popover} from 'bootstrap'; // note: install bootstrap an
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Import initDb method from database.js
-import{initDb, getDb, postDb} from './database';
+import{initDb, getDb, postDb, deleteDb} from './database';
 
 // Import fetchCards function from cards.js
 import{fetchCards} from './cards';
@@ -67,3 +67,12 @@ form.addEventListener('submit', event => {
     // Reload the DOM
     fetchCards();
 });
+
+window.deleteCard = (event) => {
+    // Grab the id from the button element attached to the contact card.
+    let id = parseInt(event.id)
+    // Delete the card
+    deleteDb(id);
+    // Reload the DOM
+    fetchCards()
+}
